@@ -1,0 +1,26 @@
+<!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">JanZou</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            {% for link in site.links %}
+              <li class="link-n"><a href="{% if link.external %}{{ link.url }}{% else %}{{ site.url }}{{ link.url }}{% endif %}" {% if link.external %}target="_blank"{% endif %}>{{ link.title }}</a></li>
+            {% endfor %}
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="http://weibo.com/u/2315302983" target="_blink"><img src="/assets/icons/weibo.png"></a></li>
+            <li><a href="https://twitter.com/zoujinglin" target="_blink"><img src="/assets/icons/twitter.png"></a></li>
+            <li><a href="https://github.com/Jan-zou" target="_blink"><img src="/assets/icons/github.png"></a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>

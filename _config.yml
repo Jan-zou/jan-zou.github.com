@@ -1,0 +1,35 @@
+url: http://jan-zou.github.io
+# url: http://0.0.0.0:4000
+author: JanZou
+
+future:      false
+show_drafts: nil
+limit_posts: 0
+
+highlighter: pygments
+
+relative_permalinks: true
+
+permalink:     /:year/:i_month/:i_day/:title/
+paginate_path: 'page:num'
+paginate: 5
+
+# Links to include in top navigation
+# For external links add external: true
+links:
+  - title: Archives
+    url: /archives/
+  - title: Tags
+    url: /tags/
+  - title: About
+    url: /about/
+  
+
+tag_page_layout: tag_page
+tag_page_dir: tags
+
+archive_page_layout: archive_page
+archive_page_dir: archives
+
+
+

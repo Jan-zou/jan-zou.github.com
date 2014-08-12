@@ -1,0 +1,32 @@
+---
+layout: default
+title: tags
+---
+<div class="row">
+	<div class="col-md-offset-1 col-md-7">
+		<ol class="list-unstyled title-item">
+			{% for tag in site.tags %}
+			<h2 class="tags" id="{{ tag[0] }}">{{ tag[0] }}</h2>
+				{% for post in tag[1] %}
+				<li>
+					<time class="meta" datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+	  				<a class="tag-t" href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+				</li>
+				{% endfor %}
+				<hr/>
+			{% endfor %}
+		</ol>
+	</div>
+
+	<div class="col-md-offset-1 col-md-3">
+		<h3>Tags:</h3>
+	    <div class="list-group">
+	    	{% for tag in site.tags %}
+	        	<a href="#{{ tag[0] }}" class="list-group-item">
+	          		<span class="badge">{{ tag | last | size }}</span>
+	          		{{ tag[0] }}
+	        	</a>
+	       	{% endfor %}
+		</div>
+	</div>
+</div>

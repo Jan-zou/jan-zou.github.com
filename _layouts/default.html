@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="{{ site.author }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title }} &mdash; {{ site.author }}{% else %}{{ site.author }}{% endif %}</title>
+    <link rel="shortcut icon" href="/assets/icons/favicon.ico">
+    
+    <!-- Bootstrap -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="/assets/css/main.css" rel="stylesheet">
+  </head>
+  
+  <body>
+    {% include header.html %}
+
+    <div class="container">
+      {{ content }}
+    </div>
+  
+    {% include footer.html %}
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>
