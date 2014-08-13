@@ -26,7 +26,7 @@ layout: default
     <!-- article use info -->
     <div class="paperinfo">
         <p>Write by:
-            <span class="meta"> {{ site.author.name }}</span>
+            <span class="meta"> {{ site.author }}</span>
         </p>
         <p class="license">
             Published under <a rel="license meta" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blink">(CC) BY-NC-SA</a>
@@ -50,4 +50,25 @@ layout: default
         {% endunless %}
     </ul>
 
+    <!-- duoshuo start -->
+    <div class="ds-thread" data-thread-key="{{ page.id }}" data-title="{{ page.title }}" data-url="{{ page.url }}"></div>
+    <!-- duoshuo end -->
+
+    <!-- duoshuoJS start -->
+    <script type="text/javascript">
+        var duoshuoQuery = {short_name:"janzou"};
+            (function() {
+                var ds = document.createElement('script');
+                ds.type = 'text/javascript';ds.async = true;
+                ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                ds.charset = 'UTF-8';
+                (document.getElementsByTagName('head')[0] 
+                 || document.getElementsByTagName('body')[0]).appendChild(ds);
+            })();
+    </script>
+    <!-- duoshuoJS end -->
+
+
 </article>
+
+
