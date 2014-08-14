@@ -14,6 +14,8 @@ permalink:     /:year/:i_month/:i_day/:title/
 paginate_path: 'page:num'
 paginate: 5
 
+markdown:   redcarpet
+
 # Links to include in top navigation
 # For external links add external: true
 links:
