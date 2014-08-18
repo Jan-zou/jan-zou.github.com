@@ -11,6 +11,13 @@ li {
   line-height: 1.4;
 }
 
+#uptop {
+  display:none;
+  position:fixed;
+  bottom:40px;
+  right: 40px;
+}
+
 /* Navbar */
 .navbar-default {
 	background-color: rgba(248,248,248,0.9);
