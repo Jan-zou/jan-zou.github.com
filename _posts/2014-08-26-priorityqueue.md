@@ -1,7 +1,7 @@
 ---
 layout: post        
 tags: [Data Structure, Python]    
-Priority Queue——Binary heap
+title: Priority Queue——Binary heap
 ---
 
 实现**优先队列(priority queue)**的一种经典的方式是使用一个叫**二叉堆(binary heap)**的数据结构。二叉堆实际上是一棵**完全二叉树**，且满足堆的性质。它对于插入和查找操作的时间复杂度都是**O(logn)**。
