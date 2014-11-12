@@ -18,10 +18,11 @@ li {
   right: 40px;
 }
 
+
 /* Navbar */
 .navbar-default {
 	background-color: rgba(248,248,248,0.9);
-}	
+}
 .navbar-brand {
 	padding: 25px 15px;
 	font-size: 1.5em;
@@ -35,6 +36,7 @@ li {
 	text-shadow: 0 0 5px rgba(253,70,0,0.5);
 }
 
+
 /*  paper list */
 .meta {
 	color: #999;
@@ -45,7 +47,11 @@ li {
 .pager {
   margin: 35px 0 15px;
 }
-.postlist hr, ol hr {
+.postlist hr {
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+ol hr {
   margin-top: 10px;
   margin-bottom: 0;
 }
@@ -59,7 +65,7 @@ li {
 
 /*  post */
 header {
-	padding-top: 20px; 
+	padding-top: 20px;
 }
 header h1 {
   margin-bottom: 20px;
@@ -85,7 +91,6 @@ section {
 }
 
 
-
 h1, h2, h3, h4, h5, h6 {
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
   letter-spacing: -0.03em;
@@ -94,12 +99,10 @@ h1, h2, h3, h4, h5, h6 {
                0 0 5px rgba(181, 232, 83, 0.1),
                0 0 10px rgba(181, 232, 83, 0.1);
 }
-
 blockquote {
   color: #aaa;
   font-size: 1.1em;
 }
-
 pre {
   background: #FDF6E3;
   border: 1px solid rgba(255, 255, 255, 0.15);
@@ -113,6 +116,3 @@ pre {
   overflow: auto;
   overflow-y: hidden;
 }
-
-
-
