@@ -15,7 +15,7 @@ layout: default
     {% endunless %}
 
     <div class="postlist">
-        <h3><a href="{{ post.url }}" rel="prefetch">{{ post.title }}</a></h3>
+        <h3><a href="{{ post.url }}" rel="prefetch" class="title">{{ post.title }}</a></h3>
         <div class="meta">
             <time pubdate datetime="{{ post.date | date: "%Y-%m-%d" }}" title="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%Y-%m-%d" }}</time>
             {% for tag in post.tags %}

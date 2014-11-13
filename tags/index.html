@@ -10,7 +10,7 @@ title: tags
 				{% for post in tag[1] %}
 				<li>
 					<time class="meta" datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-	  				<a class="tag-t" href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+	  				<a class="tag-t title" href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
 				</li>
 				{% endfor %}
 				<hr/>

@@ -38,6 +38,10 @@ li {
 
 
 /*  paper list */
+a.title:hover {
+  color: #a385a5;
+  text-decoration: none;
+}
 .meta {
 	color: #999;
 }
@@ -61,6 +65,30 @@ ol hr {
 .title-item li a {
   font-size: 1.3em;
 }
+a.buttonize {
+  display: inline-block;
+  border-radius: 30px;
+  outline: 0;
+  transition-property: all;
+  transition-duration: .2s;
+}
+a.buttonize.outline {
+  background-color: transparent;
+  color: #767676;
+  border: 1px solid #e4e4e4;
+}
+a.buttonize.small {
+  font-size: 14px;
+  line-height: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-weight: 400;
+}
+a.buttonize.outline:hover {
+  color: #fff;
+  background-color: #a385a5;
+  text-decoration: none;
+}
 
 
 /*  post */
@@ -77,7 +105,7 @@ header a, .meta a {
   background-color: #999999;
   border-radius: 10px;
   color: #ffffff;
-  padding: 3px;
+  padding: 3px 8px;
   font-size: 0.8em;
 }
 header a:hover, .meta a:hover {
@@ -91,6 +119,35 @@ section {
 }
 
 
+/* about */
+h2#user_top {
+  text-transform: uppercase;
+  font-size: 38px;
+  line-height: 38px;
+  color: #A385A5;
+  font-weight: 900;
+  font-family: 'freight-sans-pro',sans-serif;
+  padding: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  max-width: 500px;
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+h3#category {
+  margin: 0;
+  font-size: 23px;
+  color: #6e6e6e;
+  font-weight: 300;
+  max-width: 450px;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+/* general */
 h1, h2, h3, h4, h5, h6 {
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
   letter-spacing: -0.03em;
