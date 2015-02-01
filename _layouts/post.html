@@ -10,19 +10,19 @@ layout: default
             <time pubdate datetime="{{ page.date | date:"%Y-%m-%d" }}" title="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%Y-%m-%d" }}</time>
             <!-- tags -->
             {% for tag in page.tags %}
-                <a href="/tags/{{ tag }}/" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>
+                <a>{{ tag }}</a>
                 {% if forloop.last != true %}, {% endif %}
             {% endfor %}
         </div>
     </header>
-  
+
     <!-- article -->
     <hr>
     <section class="article">
       {{ content }}
     </section>
     <hr>
-    
+
     <!-- article use info -->
     <div class="paperinfo">
         <p>Written by:

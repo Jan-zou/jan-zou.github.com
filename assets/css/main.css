@@ -160,16 +160,16 @@ blockquote {
   color: #aaa;
   font-size: 1.1em;
 }
-pre {
-  background: #FDF6E3;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  padding: 10px;
-  font-size: 14px;
-  color: #4AA19A;
-  border-radius: 2px;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-  text-wrap: normal;
-  overflow: auto;
-  overflow-y: hidden;
-}
+/* pre { */
+  /* background: #FDF6E3; */
+  /* border: 1px solid rgba(255, 255, 255, 0.15); */
+  /* padding: 10px; */
+  /* font-size: 14px; */
+  /* color: #4AA19A; */
+  /* border-radius: 2px; */
+  /* -moz-border-radius: 2px; */
+  /* -webkit-border-radius: 2px; */
+  /* text-wrap: normal; */
+  /* overflow: auto; */
+  /* overflow-y: hidden; */
+/* } */
