@@ -1,74 +1,50 @@
 ---
 layout: default
 ---
-<article class="col-md-offset-2 col-md-8">
-    <header>
-        <!-- title -->
-        <h1 class="title">{{ page.title }}</h1>
-        <div class="meta">
-            <!-- time -->
-            <time pubdate datetime="{{ page.date | date:"%Y-%m-%d" }}" title="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%Y-%m-%d" }}</time>
-            <!-- tags -->
-            {% for tag in page.tags %}
-                <a>{{ tag }}</a>
-                {% if forloop.last != true %}, {% endif %}
-            {% endfor %}
-        </div>
-    </header>
 
-    <!-- article -->
-    <hr>
-    <section class="article">
-      {{ content }}
-    </section>
-    <hr>
+<div class="post">
+  <h1 class="post-title">{{ page.title }}</h1>
+  <span class="post-date">{{ page.date | date_to_string }}</span>
+  <!-- tags -->
+  {% for tag in page.tags %}
+      <a class="post-tag" href="/tags/#{{ tag }}">{{ tag }}</a>
+      <!-- {% if forloop.last != true %}, {% endif %} -->
+  {% endfor %}
+  <hr>
+  {{ content }}
+</div>
 
-    <!-- article use info -->
-    <div class="paperinfo">
-        <p>Written by:
-            <span class="meta"> {{ site.author }}</span>
-        </p>
-        <p class="license">
-            Published under <a rel="license meta" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blink">(CC) BY-NC-SA</a>
-        </p>
-    </div>
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    {% for post in site.related_posts limit:3 %}
+      <li>
+        <h4>
+          <a href="{{ post.url }}">
+            {{ post.title }}
+          </a>
+          <small>{{ post.date | date_to_string }}</small>
+        </h4>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
 
-    <!-- paginator -->
-    <ul class="pager">
-        {% if page.previous %}
-          <li class="previous"><a href="{{ page.previous.url }}" title="Previous post">&larr;previous</a></li>
-        {% endif %}
-        {% unless page.previous %}
-          <li class="previous disabled"><a href="#">&larr;previous</a></li>
-        {% endunless %}
+<!-- duoshuo start -->
+<div class="ds-thread" data-thread-key="{{ page.id }}" data-title="{{ page.title }}" data-url="{{ page.url }}">
+</div>
+<!-- duoshuo end -->
 
-        {% if page.next %}
-          <li class="next"><a href="{{ page.next.url }}">next&rarr;</a></li>
-        {% endif %}
-        {% unless page.next %}
-          <li class="next disabled"><a href="#" title="Next post">next&rarr;</a></li>
-        {% endunless %}
-    </ul>
-
-    <!-- duoshuo start -->
-    <div class="ds-thread" data-thread-key="{{ page.id }}" data-title="{{ page.title }}" data-url="{{ page.url }}"></div>
-    <!-- duoshuo end -->
-
-    <!-- duoshuoJS start -->
-    <script type="text/javascript">
-        var duoshuoQuery = {short_name:"janzou"};
-            (function() {
-                var ds = document.createElement('script');
-                ds.type = 'text/javascript';ds.async = true;
-                ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-                ds.charset = 'UTF-8';
-                (document.getElementsByTagName('head')[0] 
-                 || document.getElementsByTagName('body')[0]).appendChild(ds);
-            })();
-    </script>
-    <!-- duoshuoJS end -->
-
-
-</article>
-
-
+<!-- duoshuoJS start -->
+<script type="text/javascript">
+    var duoshuoQuery = {short_name:"janzou"};
+        (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';ds.async = true;
+            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0]
+             || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+</script>
+<!-- duoshuoJS end -->
