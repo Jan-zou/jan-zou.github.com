@@ -3,4 +3,4 @@ jan-zou.github.com
 
 My Personal Blog
 
-Use Mark Otto's theme of [Lanyon].
+Style modified from Mark Otto's theme of [Lanyon].
