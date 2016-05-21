@@ -2,8 +2,16 @@ url: http://blog.zoujinglin.com.cn
 # url: http://0.0.0.0:4000
 
 # Dependencies
-markdown:         kramdown
 highlighter:      rouge
+markdown:         kramdown
+kramdown:
+  input: GFM
+  extensions:
+    - autolink
+    - footnotes
+    - smart
+  syntax_highlighter: rouge
+
 
 # Permalinks
 permalink:        pretty
