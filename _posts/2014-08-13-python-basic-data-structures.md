@@ -3,7 +3,9 @@ title: Python Data Structures —— Basic
 tags: [Python, Data Structure]
 layout: post
 ---
+
 本文主要总结Python内置数据结构的性能分析和基本线性结构的Python实现。
+
 
 ### Python内置数据结构的性能分析
 1. Big-O Efficiency of Python List Operators
@@ -11,6 +13,7 @@ layout: post
 
 2. Big-O Efficiency of Python Dictionary Operators
 ![dict operators](/assets/blog/20140803_dict.png)
+
 
 ### Linear Structures
 #### Stack 栈

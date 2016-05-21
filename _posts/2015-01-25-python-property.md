@@ -14,7 +14,7 @@ Python中有一个被称为**属性函数(property)**的小概念，它可以做
 在本文中，您将学习如何以几种不同的方式来使用内置的**属性**函数。希望读到文章的末尾时，你能看到它是多么有用。
 
 
-##开始
+###  开始
 
 使用属性函数的最简单的方法之一是将它作为一个方法的装饰器来使用。这可以让你将一个类方法转变成一个类属性。当我需要做某些值的合并时，我发现这很有用。其他想要获取它作为方法使用的人，发现在写转换函数时它很有用。让我们来看一个简单的例子：
 
@@ -58,7 +58,7 @@ AttributeError: can't set attribute
 这是一种限制，因此让我们来看看另一个例子，其中我们可以创建一个允许设置的属性。
 
 
-##使用Python property更换setter和getter方法
+### 使用Python property更换setter和getter方法
 
 让我们假设我们有一些遗留代码，它们是由一些对Python理解得不够好的人写的。如果你像我一样，你之前已经看到过这类的代码：
 
@@ -176,12 +176,12 @@ if __name__ == "__main__":
 如果你看**属性函数**的说明，它有fget, fset, fdel和doc几个参数。如果你想对属性使用**del**命令，你可以使用**@fee.deleter**创建另一个装饰器来装饰相同名字的函数从而实现删除的同样效果。
 
 
-##结束语
+### 结束语
 
 现在你知道如何在你的类中使用Python的属性函数。希望你能找到更有用的方式，在你的代码中使用它们。
 
 
-##补充阅读：
+### 补充阅读：
 
 + [Python中的getter和setter方法](http://eli.thegreenplace.net/2009/02/06/getters-and-setters-in-python/)
 + 官方Python[文档中对property的介绍](http://docs.python.org/release/2.6/library/functions.html#property)
