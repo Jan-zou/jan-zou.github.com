@@ -1,7 +1,7 @@
 ---
-title: 程序员调代码访谈：Brent Simmons       
-tags: [Translation]     
 layout: post
+tags: [Translation]
+title: 程序员调代码访谈：Brent Simmons
 ---
 
 *本文由[@Jan_zou](http://blog.jobbole.com/author/janzou/)翻译，原文出处：[Karim Hamidou](http://debuggers.co/obj-c/mac/2014/05/01/Brent-Simmons.html)*

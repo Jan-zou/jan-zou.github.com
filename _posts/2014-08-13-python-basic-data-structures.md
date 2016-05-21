@@ -1,21 +1,21 @@
 ---
-title: Python Data Structures —— Basic	   
-tags: [Python, Data Structure]		
+title: Python Data Structures —— Basic
+tags: [Python, Data Structure]
 layout: post
 ---
 本文主要总结Python内置数据结构的性能分析和基本线性结构的Python实现。
 
 ### Python内置数据结构的性能分析
-1. Big-O Efficiency of Python List Operators	
+1. Big-O Efficiency of Python List Operators
 ![list operators](/assets/blog/20140803_list.png)
 
-2. Big-O Efficiency of Python Dictionary Operators	
+2. Big-O Efficiency of Python Dictionary Operators
 ![dict operators](/assets/blog/20140803_dict.png)
 
 ### Linear Structures
 #### Stack 栈
-**LIFO, last-in first-out**		
-栈可以解决若干问题，如检查括号匹配、进制间转换、逆波兰表达式求值、图的深度搜索等。		
+**LIFO, last-in first-out**
+栈可以解决若干问题，如检查括号匹配、进制间转换、逆波兰表达式求值、图的深度搜索等。
 Stack ADT：
 
 + `Statck()` creates a new stack that is empty.
@@ -27,27 +27,29 @@ Stack ADT：
 
 Stack Implement:
 
-    class Stack:
-        def __init__(self):
-            self.items = []
+```python
+class Stack:
+    def __init__(self):
+        self.items = []
 
-        def isEmpty(self):
-            return self.items == []
-            
-        def push(self, item):
-            self.items.append(item)
+    def isEmpty(self):
+        return self.items == []
 
-        def pop(self):
-            return self.items.pop()
+    def push(self, item):
+        self.items.append(item)
 
-        def peek(self):
-            return self.items[len(self.items)-1]
+    def pop(self):
+        return self.items.pop()
 
-        def size(self):
-            return len(self.items)
+    def peek(self):
+        return self.items[len(self.items)-1]
+
+    def size(self):
+        return len(self.items)
+```
 
 #### Queue 队列
-**FIFO, first-in first-out**		
+**FIFO, first-in first-out**
 队列一般用于解决需要优先队列的问题或者进行广度优先搜索的问题等。
 Queue ADT:
 
@@ -59,40 +61,41 @@ Queue ADT:
 
 Queue Implement：
 
-    # 假设list中index为0的位置为尾部
-    class Queue:
-        def __init__(self):
-            self.items = []
+```python
+# 假设list中index为0的位置为尾部
+class Queue:
+    def __init__(self):
+        self.items = []
 
-        def isEmpty(self):
-            return self.items == []
-            
-        def enqueue(self, item):
-            self.items.insert(0, item)
-            
-        def dequeue(self):
-            return self.items.pop()
-            
-        def size(self):
-            return len(self.items)
+    def isEmpty(self):
+        return self.items == []
 
-    # 也可直接使用deque库实现队列的插入删除
-    from collections import deque
+    def enqueue(self, item):
+        self.items.insert(0, item)
 
-    class Queue:
-        def __init__(self):
-            self.items = deque([])
-        
-        def enqueue(self, item):
-            self.items.append(item)
-            
-        def dequeue(self):
-            return self.items.popleft()
+    def dequeue(self):
+        return self.items.pop()
 
+    def size(self):
+        return len(self.items)
+
+# 也可直接使用deque库实现队列的插入删除
+from collections import deque
+
+class Queue:
+    def __init__(self):
+        self.items = deque([])
+
+    def enqueue(self, item):
+        self.items.append(item)
+
+    def dequeue(self):
+        return self.items.popleft()
+```
 
 #### Deque (Double-Queue) 双向队列
 
-![basicdeque](/assets/blog/20140803_basicdeque.png)		
+![basicdeque](/assets/blog/20140803_basicdeque.png)
 双向队列是头尾都可以进行插入和删除的队列。可用于解决回文检查问题。
 Deque ADT:
 
@@ -106,36 +109,38 @@ Deque ADT:
 
 Deque Implement:
 
-    # 假设list中index为0的位置为尾部
-    class Deque:
-        def __init__(self):
-            self.items = []
-            
-        def isEmpty(self):
-            return self.items == []
-            
-        def addFront(self, item):
-            self.items.append(item)
-            
-        def addRear(self, item):
-            self.items.insert(0, item)
-            
-        def removeFront(self):
-            return self.items.pop()
-            
-        def removeRear(self):
-            return self.items.pop(0)
-            
-        def size(self):
-            return len(self.items)
-            
-        # 也可直接使用deque库实现队列的插入删除
-        from collections import deque
-        
-        addFront:    appendleft(x)
-        addRear:     append(x)
-        removeFront: popleft()
-        removeRear:  pop()
+```python
+# 假设list中index为0的位置为尾部
+class Deque:
+    def __init__(self):
+        self.items = []
+
+    def isEmpty(self):
+        return self.items == []
+
+    def addFront(self, item):
+        self.items.append(item)
+
+    def addRear(self, item):
+        self.items.insert(0, item)
+
+    def removeFront(self):
+        return self.items.pop()
+
+    def removeRear(self):
+        return self.items.pop(0)
+
+    def size(self):
+        return len(self.items)
+
+    # 也可直接使用deque库实现队列的插入删除
+    from collections import deque
+
+    addFront:    appendleft(x)
+    addRear:     append(x)
+    removeFront: popleft()
+    removeRear:  pop()
+```
 
 #### Linked List(Unordered) 链表
 
@@ -153,77 +158,78 @@ Linked List ADT:
 + `pop()` removes and returns the last item in the list.
 + `pop(pos)` removes and returns the item at position pos.
 
-在头部插入：	
-![addtohead](/assets/blog/20140803_addtohead.png)	
-在头部删除：	
-![removehead](/assets/blog/20140803_removehead.png)		
-在中间删除：			
+在头部插入：
+![addtohead](/assets/blog/20140803_addtohead.png)
+在头部删除：
+![removehead](/assets/blog/20140803_removehead.png)
+在中间删除：
 ![removemiddle](/assets/blog/20140803_removemiddle.png)
 
 Linked List Implement:
 
-    class Node:
-        def __init__(self, initdata):
-            self.data = initiate
-            self.next = None
+```python
+class Node:
+    def __init__(self, initdata):
+        self.data = initiate
+        self.next = None
 
-        def getData(self):
-            return self.data
-        
-        def getNext(self):
-            return self.next
-            
-        def setData(self, newdata):
-            self.data = newdata
-            
-        def setNext(self, newnext):
-            self.next = newnext
+    def getData(self):
+        return self.data
 
-    class LinkedList:
-        def __init__(self):
-            self.head = None
+    def getNext(self):
+        return self.next
 
-        def isEmpty(self):
-            return self.head == None
+    def setData(self, newdata):
+        self.data = newdata
 
-        def add(self, item):
-            temp = Node(item)
-            temp.setNext(self.head)
-            self.head = temp
+    def setNext(self, newnext):
+        self.next = newnext
 
-        def size(self):
-            current = self.head
-            count = 0
-            while current != None:
-                count = count + 1
-                current = current.getNext()
-            return count
+class LinkedList:
+    def __init__(self):
+        self.head = None
 
-        def search(self, item):
-            current = self.head
-            found = False
-            while current != None and not found:
-                if current.getData() == item:
-                    found = True
-                else:
-                    current = current.getNext()
-            return found
+    def isEmpty(self):
+        return self.head == None
 
-        def remove(self, item):
-            current = self.head
-            previous = None
-            found = False
-            while not found:
-                if current.getData() == item:
-                    found = True
-                else:
-                    previous = current
-                    current = current.getNext()
-                    
-            if previous == None:
-                self.head = current.getNext()
+    def add(self, item):
+        temp = Node(item)
+        temp.setNext(self.head)
+        self.head = temp
+
+    def size(self):
+        current = self.head
+        count = 0
+        while current != None:
+            count = count + 1
+            current = current.getNext()
+        return count
+
+    def search(self, item):
+        current = self.head
+        found = False
+        while current != None and not found:
+            if current.getData() == item:
+                found = True
             else:
-                previous.setNext(current.getNext())
+                current = current.getNext()
+        return found
 
-				
+    def remove(self, item):
+        current = self.head
+        previous = None
+        found = False
+        while not found:
+            if current.getData() == item:
+                found = True
+            else:
+                previous = current
+                current = current.getNext()
+
+        if previous == None:
+            self.head = current.getNext()
+        else:
+            previous.setNext(current.getNext())
+```
+
 *Reference：[《Problem Solving with Algorithms and Data Structures Using Python》](http://interactivepython.org/courselib/static/pythonds/index.html)。*
