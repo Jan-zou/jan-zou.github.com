@@ -73,7 +73,8 @@ a {
 /* `:focus` is linked to `:hover` for basic accessibility */
 a:hover,
 a:focus {
-  text-decoration: underline;
+  /*color: #61A3D8;*/
+  text-decoration: none;
 }
 
 /* Headings */
