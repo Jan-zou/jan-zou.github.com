@@ -7,7 +7,7 @@ title: 程序员调代码访谈：Brent Simmons
 *本文由[@Jan_zou](http://blog.jobbole.com/author/janzou/)翻译，原文出处：[Karim Hamidou](http://debuggers.co/obj-c/mac/2014/05/01/Brent-Simmons.html)*
 
 
-### 你是谁？
+## 你是谁？
 我是一个软件开发者。我住在西雅图——美国西北部太平洋沿岸。
 
 我和我的同事Dave Wiskus和John Gruber写了一个iPhone上的笔记应用Vesper。以前，我写过的应用有NetNewsWire, MarsEdit和Glassboard。
@@ -15,7 +15,7 @@ title: 程序员调代码访谈：Brent Simmons
 我的博客在[inessential.com](http://inessential.com/)，我和我的朋友Chris Parrish在[therecord.co](http://therecord.co/)上发布了一个播客。
 
 
-### 你解决了什么有趣的bug?
+## 你解决了什么有趣的bug?
 
 对于某些版本的OS X - 可能是OS X10.5 - 苹果改变了如何将崩溃日志存储在磁盘上。之前是每个应用一个文件，但后来苹果改变成每个崩溃日志一个文件。
 

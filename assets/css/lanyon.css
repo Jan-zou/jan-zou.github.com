@@ -319,7 +319,7 @@ a.sidebar-nav-item:focus {
   margin-top: 0;
 }
 .page-title {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 .post-title {
   margin-bottom: 25px;
@@ -347,7 +347,8 @@ a.post-tag {
 
 /* Related posts */
 .related {
-  padding-top: 2rem;
+  margin-top: 2rem;
+  padding-top: 1rem;
   padding-bottom: 2rem;
   border-top: 1px solid #eee;
 }

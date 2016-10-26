@@ -8,7 +8,6 @@ layout: default
   <!-- tags -->
   {% for tag in page.tags %}
       <a class="post-tag" href="/tags/#{{ tag }}">{{ tag }}</a>
-      <!-- {% if forloop.last != true %}, {% endif %} -->
   {% endfor %}
   <hr>
   {{ content }}

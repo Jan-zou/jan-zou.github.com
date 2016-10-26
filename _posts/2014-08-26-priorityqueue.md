@@ -9,7 +9,7 @@ title: Priority Queue——Binary heap
 二叉堆画出来像树，但实际上内部实现起来只需要使用**数组**。二叉堆有两种常见形式：**最小堆(min heap)**——对于堆中每个节点（除根节点）, 其父结点的值小于其值；**最大堆(max heap)**——对于堆中每个节点（除根节点）, 其父结点的值小于其值。
 
 
-### Binary Heap Operation
+## Binary Heap Operation
 
 + `BinaryHeap()` creates a new,empty,binary heap
 + `insert(k)` adds a new item to the heap

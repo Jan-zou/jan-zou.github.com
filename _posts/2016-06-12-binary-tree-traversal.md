@@ -22,7 +22,7 @@ class TreeNode(object):
         self.right = None
 ```
 
-### 递归遍历
+## 递归遍历
 
 递归实现非常简单，按照遍历的次序，对当前结点分别调用左子树和右子树即可。二叉树遍历的递归实现，每个结点只需遍历一次，时间复杂度为O(n)。因为使用了递归，最差情况下递归调用的深度为O(n)，所以空间复杂度为O(n)。
 
@@ -49,7 +49,7 @@ def postorder(tree):
         print tree.val
 ```
 
-### 非递归遍历
+## 非递归遍历
 
 非递归实现借助**栈**。二叉树遍历的非递归实现，每个结点只需遍历一次，时间复杂度为O(n)。因为使用了栈，空间复杂度为二叉树的高度，故空间复杂度为O(n)。
 
@@ -100,7 +100,7 @@ def postorder(root):
     return result
 ```
 	
-### Morris遍历
+## Morris遍历
 
 Morris遍历算法只需要常数空间O(1)即可，在O(n)时间内完成二叉树的遍历。要使用O(1)空间进行遍历的困难之处在于遍历到子结点的时候如何重新返回到父节点？为了解决这个问题，Morris遍历方法用到了**线索二叉树**。它的原理很简单，只需要利用叶子节点中的左右空指针指向某种顺序遍历下的前驱节点或后继节点即可。
 
@@ -216,7 +216,7 @@ def traceBack(fromNode, toNode):
 
 
 
-### *Reference* :
+## *Reference* :
 [1] [Morris二叉树遍历算法](http://blog.csdn.net/mxw976235955/article/details/39829973)    
 [2] [Morris Traversal方法遍历二叉树](http://www.cnblogs.com/AnnieKim/archive/2013/06/15/MorrisTraversal.html)    
 [3] Leetcode: [94](https://leetcode.com/problems/binary-tree-inorder-traversal/), [144](https://leetcode.com/problems/binary-tree-preorder-traversal/), [145](https://leetcode.com/problems/binary-tree-postorder-traversal/)

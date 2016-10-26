@@ -7,7 +7,7 @@ layout: post
 本文主要总结Python内置数据结构的性能分析和基本线性结构的Python实现。
 
 
-### Python内置数据结构的性能分析
+## Python内置数据结构的性能分析
 1. Big-O Efficiency of Python List Operators
 ![list operators](/assets/blog/20140803_list.png)
 
@@ -15,8 +15,8 @@ layout: post
 ![dict operators](/assets/blog/20140803_dict.png)
 
 
-### Linear Structures
-#### Stack 栈
+## Linear Structures
+### Stack 栈
 **LIFO, last-in first-out**
 栈可以解决若干问题，如检查括号匹配、进制间转换、逆波兰表达式求值、图的深度搜索等。
 Stack ADT：
@@ -51,7 +51,7 @@ class Stack:
         return len(self.items)
 ```
 
-#### Queue 队列
+### Queue 队列
 **FIFO, first-in first-out**
 队列一般用于解决需要优先队列的问题或者进行广度优先搜索的问题等。
 Queue ADT:
@@ -96,7 +96,7 @@ class Queue:
         return self.items.popleft()
 ```
 
-#### Deque (Double-Queue) 双向队列
+### Deque (Double-Queue) 双向队列
 
 ![basicdeque](/assets/blog/20140803_basicdeque.png)
 双向队列是头尾都可以进行插入和删除的队列。可用于解决回文检查问题。
@@ -145,7 +145,7 @@ class Deque:
     removeRear:  pop()
 ```
 
-#### Linked List(Unordered) 链表
+### Linked List(Unordered) 链表
 
 Linked List ADT:
 
