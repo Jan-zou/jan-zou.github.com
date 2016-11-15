@@ -7,8 +7,8 @@ permalink: /about/
 <h1 id="post-title">I'm Jan Zou</h1>
 <hr>
 <p>Currently an master student at <a href="http://www.ruc.edu.cn/">Renmin Unviersity.</a></p>
-<p>I'm focus on Algorithms, Machine Learning and Data Mining etc.</p>
-<p>I'm interested in reading, coding and travelling.</p>
+<p>I'm focus on Algorithms, Machine Learning, Data Mining and Data Analysis etc.</p>
+<p>I'm interested in reading, coding and travel.</p>
 <p>You can contact me at <strong>zoujlin@gmail.com</strong></p>
 <p>Have fun :)</p>
 
