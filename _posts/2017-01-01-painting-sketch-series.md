@@ -15,3 +15,4 @@ title: 我的绘画生活
 + [素描：第2课]({% post_url 2017-01-08-painting-sketch-2 %})
 + [素描：第3课]({% post_url 2017-01-15-painting-sketch-3 %})
 + [素描：日常习作1]({% post_url 2017-03-22-painting-sketch-daily-1 %})
++ [素描：第4课~第7课]({% post_url 2017-04-16-painting-sketch-4-7 %})
