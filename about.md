@@ -6,8 +6,8 @@ permalink: /about/
 
 <h1 id="post-title">I'm Jan Zou</h1>
 <hr>
-<p>Currently an master student at <a href="http://www.ruc.edu.cn/">Renmin Unviersity.</a></p>
-<p>I'm focus on Algorithms, Machine Learning, Data Mining and Data Analysis etc.</p>
+<p>Currently an Business data analyst at <a href="https://blog.growingio.com/">GrowingIO.</a></p>
+<p>I'm focus on Data Analysis, Data Mining, Machine Learning and Algorithms etc.</p>
 <p>I'm interested in reading, coding and travel.</p>
 <p>You can contact me at <strong>zoujlin@gmail.com</strong></p>
 <p>Have fun :)</p>
