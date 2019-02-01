@@ -1,4 +1,4 @@
-url: http://blog.zoujinglin.com.cn
+# url: http://blog.zoujinglin.com.cn
 # url: http://0.0.0.0:4000
 
 # Dependencies
@@ -18,7 +18,7 @@ permalink:        pretty
 
 # site
 title:            JanZou
-tagline:          'programmer, analyst'
+tagline:          'analyst, programmer'
 description:      'Hello, I am JanZou.'
 
 paginate:         8
