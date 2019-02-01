@@ -18,6 +18,7 @@ permalink: /about/
     <li><a href="https://github.com/Jan-zou" target="_blink"><img src="/assets/icons/github.png"></a></li>
     <li><a href="https://twitter.com/zoujinglin" target="_blink"><img src="/assets/icons/twitter.png"></a></li>
     <li><a href="http://weibo.com/u/2315302983" target="_blink"><img src="/assets/icons/weibo.png"></a></li>
+    <li><a href="https://medium.com/@zoujinglin" target="_blink"><img src="/assets/icons/medium.png" style="height: 32px;width: 32px"></a></li>
 </ul>
 
 

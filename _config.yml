@@ -28,7 +28,7 @@ future:      false
 show_drafts: nil
 limit_posts: 0
 
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
 
 
 
